@@ -11,4 +11,4 @@ resources/ -> js, css
 src/ -> Models, Controllers, Views and Router of the app
 index.php -> handles routes
 
-For upgraded version check : https://github.com/Dlucic/Mixer/
+For upgraded version check : https://github.com/Dlucic/mixer.git
