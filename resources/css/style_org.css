@@ -1,0 +1,205 @@
+body {
+background-color: #000000;
+margin: 0;
+text-align: center;
+}
+
+@font-face {
+    font-family: "SpaceMono-Regular";
+    src: url("../SpaceMono-Regular.ttf");
+}
+
+body, p, a, h1, h2, h3, input {
+  font-family: "SpaceMono-Regular";
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+#player {
+  display: inline-block;
+}
+
+
+.downloadtext {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+
+/*
+ main
+ */
+
+p {
+  color: #ffffff;
+}
+
+/* Audio Visualizer */
+.bar-wrapper {
+    height: 300px;
+    position: relative;
+}
+.bar {
+    position: relative;
+    bottom: 0;
+    width: 5px;
+    display: inline-block;
+    border: 1px solid red;
+    height: 5px;
+    border-bottom: 3px solid #fff;
+}
+
+
+/* Jukebox */
+
+.main_song {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2em;
+        border-radius: 50%;
+        animation: rotation 4s infinite linear;
+}
+
+.music_player {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+
+}
+
+@keyframes rotation {
+        from {
+                transform: rotate(0deg);
+        }
+        to {
+                transform: rotate(359deg);
+        }
+}
+
+.button {
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+}
+
+.button:hover, .downloadtext:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button_song {
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+.button_song:hover {
+background-color: #ffffff;
+animation: rotation 10s infinite linear;
+
+
+}
+
+.grid_song-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: none;
+  justify-items: center;
+
+}
+
+.grid_song-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: none;
+  padding: 10px;
+  justify-items: center;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+@media only screen and (max-width: 792px) {
+.grid_song-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: none;
+  justify-items: center;
+
+}
+
+.grid_song-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+
+}
+
+.button {
+  -webkit-appearance: none;
+  text-decoration: none;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+}
+
+.button:hover {
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.main_song {
+  margin-top:12%;
+}
+
+}
