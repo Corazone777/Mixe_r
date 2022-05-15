@@ -128,6 +128,7 @@ class UserAuth extends Model
         return false;
     }
 
+    //Display all errors
     public static function showErrors() : void
     {
         if(!empty(self::$error))
@@ -139,6 +140,7 @@ class UserAuth extends Model
         }
     }
 
+    //Take care of the user login
     public function loginUser(array $params)
     {
         $sql = "SELECT * FROM mixer.users WHERE username = :username OR email = :email";
@@ -162,6 +164,7 @@ class UserAuth extends Model
         return false;
     }
 
+    //Fetch all user data
     public function getUserData(string $username) : array
     {
         $sql = "SELECT first_name, last_name, username, email, status, registration_date FROM mixer.users WHERE username = :username";
@@ -202,6 +205,7 @@ class UserAuth extends Model
 
     }
 
+    //Delete this user, they moved on
     public function deleteUser(string $username) : bool
     {
         $sql = "DELETE FROM mixer.users WHERE username = :username";
@@ -219,16 +223,5 @@ class UserAuth extends Model
         return false;
     }
 
-    public function insert(array $data)
-    {
-        $sql = "INSERT INTO mixer.radi (id, name) VALUES (:id, :name)";
-
-        $db = $this->db;
-        $db->query($sql);
-        $db->bind(':id', $data['id']);
-        $db->bind(':name',$data['name']);
-        $db->execute();
-
-    }
 
 }

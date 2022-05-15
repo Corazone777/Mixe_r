@@ -4,7 +4,7 @@ namespace Lib;
 require_once __DIR__ . '/../config/config.php';
 use PHPMailer\PHPMailer\PHPMailer;
 
-/**
+/*
  class for sending out an email
   @to ->  For whom is email meant to be
   @from -> From whom is the email from

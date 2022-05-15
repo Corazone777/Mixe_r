@@ -3,6 +3,9 @@ namespace Lib;
 
 class VerifyInput
 {
+    /*
+     * @input -> string to verify
+     */
     public static function verifyInput(string $input) : string
     {
         $input = trim($input);

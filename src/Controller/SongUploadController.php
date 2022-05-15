@@ -8,6 +8,7 @@ use App\View\Render;
 
 class SongUploadController extends Controller
 {
+    //Upload the song
     public function upload(array $params) : void
     {
         $user_song = new SongUpload;
@@ -27,6 +28,7 @@ class SongUploadController extends Controller
         exit();
     }
 
+    //display songs from the db
     public function displaySongs() : array
     {
         $song_list = new SongUpload;

@@ -26,6 +26,8 @@ class SongUpload extends Model
             //File location
            $song_location = $_SERVER['DOCUMENT_ROOT'] .  '/public/uploads/music/' . $song_file_name;
            $album_art_location = $_SERVER['DOCUMENT_ROOT'] . '/public/uploads/art/' . $album_art;
+
+           //extensions
            $song_file_extension = pathinfo($song_location, PATHINFO_EXTENSION);
            $valid_song_extension = array("mp3");
 
@@ -42,6 +44,7 @@ class SongUpload extends Model
 
                    $sql = "INSERT INTO music (user, artist, song_name, songfile_path, songfile_name, albumart_path, albumart_name) VALUES (:user, :artist, :song_name, :songfile_path, :songfile_name, :albumart_path, :albumart_name)";
                    $db->query($sql);
+
                    //Getting username from session will be changed later.
                    session_start();
                    $user = $_SESSION['username'];
@@ -64,6 +67,7 @@ class SongUpload extends Model
         }
     }
 
+    //Display all songs from the db
     public function displayAll() : array
     {
         $sql = "SELECT * FROM mixer.music";

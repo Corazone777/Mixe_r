@@ -8,6 +8,7 @@ use App\View\Render;
 
 class SessionController extends Controller
 {
+    //method that checks if user is logged in or not
     public static function isAllowed() : bool
     {
         if(!isset($_SESSION['username']) || $_SESSION['username'] == '')
@@ -21,6 +22,7 @@ class SessionController extends Controller
         return true;
     }
 
+    //Log out user and redirect to the login page
     public static function logOut() : void
     {
         unset($_SESSION['username']);

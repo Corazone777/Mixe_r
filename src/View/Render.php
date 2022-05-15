@@ -1,6 +1,8 @@
 <?php
 namespace App\View;
 
+//Calls all user facing files
+
 class Render
 {
     public static function render_login()

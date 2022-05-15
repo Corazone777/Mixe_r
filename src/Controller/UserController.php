@@ -13,6 +13,12 @@ class UserController extends Controller
 {
     public static array $error;
 
+
+    /*
+      register the user and send mail to the created user
+      @params -> values from input form on register page
+     */
+
     public function register(array $params) : void
     {
         $user_data = new UserAuth;
@@ -35,6 +41,7 @@ class UserController extends Controller
 	
     }
 
+    //if user clicked on the link, change the status in db from disabled to enabled
     public function enable() : void
     {
         if(isset($_GET['code']))
@@ -48,6 +55,10 @@ class UserController extends Controller
         }
     }
 
+    /*
+     * login the user with given credentials
+     * @params -> values from input form located on login page
+     */
     public function login(array $params) : void
     {
         $params['username'] = VerifyInput::verifyInput($params['username']);
